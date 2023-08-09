@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     {
         _controller = controller;
         _throwsRight = throwsRight;
-        _slowThrowSpeed = mediumThrowSpeed * 0.8f;
+        _slowThrowSpeed = mediumThrowSpeed * 0.6f;
         _fastThrowSpeed = mediumThrowSpeed * 1.2f;
         if (!_throwsRight)
         {
@@ -77,19 +77,20 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         _animator.SetTrigger("StartNewThrow");
-        float secondsBeforeThrow;
-        int waitSequence = Random.Range(0, 2);
-        if (waitSequence == 0)
-        {
-            secondsBeforeThrow = shortSecondsToWait;
-        }
-        else
-        {
-            secondsBeforeThrow = longSecondsToWait;
-        }
+        float secondsBeforeThrow = Random.Range(0.2f, 4.4f);
+        print("secondsBeforeThrow: " + secondsBeforeThrow);
+        int waitSequence = Random.Range(0, 4);
+        //if (waitSequence == 1)
+        //{
+        //    secondsBeforeThrow = shortSecondsToWait;
+        //}
+        //else
+        //{
+        //    secondsBeforeThrow = longSecondsToWait;
+        //}
         yield return new WaitForSeconds(secondsBeforeThrow);
         int sequence = Random.Range(0, 2);
-        if (waitSequence == 0)
+        if (waitSequence == 1)
         {
             ThrowStar(slowSpeed);
         }
