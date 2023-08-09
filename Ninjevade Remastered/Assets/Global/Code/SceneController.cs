@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        Application.targetFrameRate = 60;
     }
 
     public void RestartScene()

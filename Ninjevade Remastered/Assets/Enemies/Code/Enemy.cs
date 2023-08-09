@@ -47,7 +47,8 @@ public class Enemy : MonoBehaviour
     {
         if (!_hasHitThrowTrigger)
         {
-            transform.position += new Vector3(movementSpeed, 0, 0);
+            //transform.Translate(new Vector3(movementSpeed, 0, 0) * Time.deltaTime);
+            transform.position += new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
         }
     }
 
@@ -67,7 +68,8 @@ public class Enemy : MonoBehaviour
     public void HandleHit()
     {
         _controller.HandleEnemyDestroyed();
-        Explosion explosion = Instantiate(_explosionPrefab, transform.position, transform.rotation);
+        //Explosion explosion = Instantiate(_explosionPrefab, transform.position, transform.rotation);
+        Instantiate(Resources.Load("Explosion1") as GameObject, transform.position, transform.rotation); 
         Destroy(gameObject);
     }
 

@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         HandleKeyboard();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Jump()
+    public void Jump()
     {
         _rigidBody2D.AddForce(Vector2.up * jumpForce);
         _isGrounded = false;
@@ -50,7 +51,7 @@ public class Player : MonoBehaviour
         _jumpAudio.Play();
     }
 
-    void SwingWeapon()
+    public void SwingWeapon()
     {
         if (_canSwingWeapon)
         {
@@ -59,13 +60,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    void FaceLeft()
+    public void FaceLeft()
     {
         transform.eulerAngles = new Vector3(0, 180, 0);
         _isFacingRight = false;
     }
 
-    void FaceRight()
+    public void FaceRight()
     {
         transform.eulerAngles = Vector3.zero;
         _isFacingRight = true;
