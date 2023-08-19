@@ -28,12 +28,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Init(EnemySpawner controller, bool throwsRight)
+    public void Init(EnemySpawner controller, bool throwsRight, float newMovementSpeed)
     {
         _controller = controller;
         _throwsRight = throwsRight;
         _slowThrowSpeed = mediumThrowSpeed * 0.6f;
         _fastThrowSpeed = mediumThrowSpeed * 1.2f;
+        movementSpeed = newMovementSpeed;
         if (!_throwsRight)
         {
             movementSpeed = -movementSpeed;
@@ -69,7 +70,10 @@ public class Enemy : MonoBehaviour
     {
         _controller.HandleEnemyDestroyed();
         //Explosion explosion = Instantiate(_explosionPrefab, transform.position, transform.rotation);
-        Instantiate(Resources.Load("Explosion1") as GameObject, transform.position, transform.rotation); 
+        Instantiate(Resources.Load("Explosion1") as GameObject, transform.position, transform.rotation);
+
+        WaveManager.Instance.HandleNinjaKilled();
+
         Destroy(gameObject);
     }
 

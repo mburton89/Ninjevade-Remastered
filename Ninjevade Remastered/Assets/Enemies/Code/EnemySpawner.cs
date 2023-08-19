@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     public void HandleEnemyDestroyed()
     {
         _enemyCount--;
-        if (_enemyCount == 0)
+        if (_enemyCount == 0 && !WaveManager.Instance.waveComplete)
         {
             SpawnRandomSequence();
         }
@@ -55,7 +55,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(_leftSideOfScreenXPos - _enemySpawnXDistanceModifier, _enemySpawnYPosition, 0);
         Enemy enemy = Instantiate(_enemyPrefab, spawnPosition, transform.rotation);
-        enemy.Init(this, true);
+        enemy.Init(this, true, WaveManager.Instance.currentNinjaRunSpeed);
         _enemyCount++;
         print("_enemyCount " + _enemyCount);
     }
@@ -64,7 +64,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(_rightSideOfScreenXPos + _enemySpawnXDistanceModifier, _enemySpawnYPosition, 0);
         Enemy enemy = Instantiate(_enemyPrefab, spawnPosition, transform.rotation);
-        enemy.Init(this, false);
+        enemy.Init(this, false, WaveManager.Instance.currentNinjaRunSpeed);
         _enemyCount++;
         print("_enemyCount " + _enemyCount);
     }
