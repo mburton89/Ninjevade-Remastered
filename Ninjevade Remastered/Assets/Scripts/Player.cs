@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     private bool _isFacingRight;
     private bool _canSwingWeapon;
     private Rigidbody2D _rigidBody2D;
-    private Animator _animator;
+    //private Animator _animator;
+    private PlayerAnimator _animator;
     [SerializeField] private GameObject _attackHitBox;
     [SerializeField] private AudioSource _swingAudio;
     [SerializeField] private AudioSource _jumpAudio;
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _rigidBody2D = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponent<PlayerAnimator>();
         _rigidBody2D.gravityScale = gravityScale;
         _isGrounded = true;
         _isFacingRight = true;
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
         {
             _rigidBody2D.linearVelocity = Vector2.zero;
             _isGrounded = true;
-            _animator.SetBool("IsJumping", false);
+            _animator.PlayIdle();
         }
     }
 
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
     {
         _rigidBody2D.AddForce(Vector2.up * jumpForce);
         _isGrounded = false;
-        _animator.SetBool("IsJumping", true);
+        _animator.PlayJump();
         _jumpAudio.Play();
     }
 
@@ -109,11 +110,11 @@ public class Player : MonoBehaviour
     private IEnumerator SwingWeaponCo()
     {
         _attackHitBox.SetActive(true);
-        _animator.SetBool("IsDeflecting", true);
+        _animator.PlayDeflect();
         _swingAudio.Play();
         yield return new WaitForSeconds(secondsDeflectHitBoxExists);
         _attackHitBox.SetActive(false);
-        _animator.SetBool("IsDeflecting", false);
+        _animator.PlayIdle();
     }
 
     private  IEnumerator CanSwingWeaponBuffer()
