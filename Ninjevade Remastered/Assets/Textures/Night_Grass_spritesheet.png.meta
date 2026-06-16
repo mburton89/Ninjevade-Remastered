@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 10509ffa28c1f454f99c8777811e3703
+guid: 5897856ff43b44041a333af0ce0ac99c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1998655984954713194
-    second: Grass SpriteSheet_0
+      213: 6575215234320430007
+    second: Night_Grass_spritesheet_0
   - first:
-      213: 2302210156702201976
-    second: Grass SpriteSheet_1
+      213: -1857322592772630958
+    second: Night_Grass_spritesheet_1
   - first:
-      213: -2910568706780740345
-    second: Grass SpriteSheet_2
+      213: 2447160362307042069
+    second: Night_Grass_spritesheet_2
   - first:
-      213: 7909249153010581266
-    second: Grass SpriteSheet_3
+      213: 1434628719195541992
+    second: Night_Grass_spritesheet_3
+  - first:
+      213: 8186820172472859767
+    second: Night_Grass_spritesheet_4
+  - first:
+      213: 5554611383547371670
+    second: Night_Grass_spritesheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,7 +115,51 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass SpriteSheet_0
+      name: Night_Grass_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3f76b2b6bdf3b50800000000000000
+      internalID: 6575215234320430007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night_Grass_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 192
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256da7041f67936e0800000000000000
+      internalID: -1857322592772630958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Night_Grass_spritesheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -117,21 +167,21 @@ TextureImporter:
         width: 192
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69bd09498f85344e0800000000000000
-      internalID: -1998655984954713194
+      spriteID: 51b3ab7426f06f120800000000000000
+      internalID: 2447160362307042069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass SpriteSheet_1
+      name: Night_Grass_spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -139,21 +189,21 @@ TextureImporter:
         width: 192
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 878f78c90f713ff10800000000000000
-      internalID: 2302210156702201976
+      spriteID: 8e159381833d8e310800000000000000
+      internalID: 1434628719195541992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass SpriteSheet_2
+      name: Night_Grass_spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -161,21 +211,21 @@ TextureImporter:
         width: 192
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70547f99e259b97d0800000000000000
-      internalID: -2910568706780740345
+      spriteID: 77c3f3c329d6d9170800000000000000
+      internalID: 8186820172472859767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass SpriteSheet_3
+      name: Night_Grass_spritesheet_5
       rect:
         serializedVersion: 2
         x: 0
@@ -183,15 +233,15 @@ TextureImporter:
         width: 192
         height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21f314d133c43cd60800000000000000
-      internalID: 7909249153010581266
+      spriteID: 690aeadaf91f51d40800000000000000
+      internalID: 5554611383547371670
       vertices: []
       indices: 
       edges: []
@@ -200,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 404a7438dca461a42835e36e27c0334c
+    spriteID: df2f3fcf342756c40ad9cb553c9f497f
     internalID: 0
     vertices: []
     indices: 
@@ -208,12 +258,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":6.0},"gridSpriteSize":{"x":192.0,"y":108.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Grass SpriteSheet_0: -1998655984954713194
-      Grass SpriteSheet_1: 2302210156702201976
-      Grass SpriteSheet_2: -2910568706780740345
-      Grass SpriteSheet_3: 7909249153010581266
+      Night_Grass_spritesheet_0: 6575215234320430007
+      Night_Grass_spritesheet_1: -1857322592772630958
+      Night_Grass_spritesheet_2: 2447160362307042069
+      Night_Grass_spritesheet_3: 1434628719195541992
+      Night_Grass_spritesheet_4: 8186820172472859767
+      Night_Grass_spritesheet_5: 5554611383547371670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
